@@ -7,14 +7,88 @@
     
   </head>
   <body>
-    <a-scene>
+  <a-scene>
       <!--INITIAL CAMERA SET UP-->
       <a-entity camera look-controls wasd-controls position="0 1.6 50"></a-entity>
       <!--BACKGROUND COLOR-->
       <a-sky color="#F4F3EA"></a-sky>
-      <a-entity 
-        position="0 30 -55"
-        text-geometry="value: What's up;"></a-entity>
+
+      <!-- Black Rectangle -->
+      <a-box
+        position="-9 0 2.5"
+        height="16.25"
+        width="18"
+        depth= "5"
+        color="black"></a-box>
+      <!-- Yellow Triangle inside Black Rectangle -->
+      <a-triangle
+        position="-9 -4.9 20"
+        vertex-a = "0 11.1 0"
+        vertex-b = "-3 0 0"
+        vertex-c="3 0 0"
+        color="#FDB813"
+        material="side: double"></a-triangle>
+
+
+      <!-- Yellow Circle inside Black Rectangle -->
+      <a-sphere position="-5 0 5" radius="4" color="#FDB813"></a-sphere>
+
+      <!-- Green Rectangle above Black Rectangle -->
+      <a-box position="-10.79 15 -4" depth="0.1" height="13.25" width="21.5" color="#1E7930"></a-box>
+
+      <!--INCOMPLETE SECTION-->
+      <!-- Two Red Circles inside the Green Rectangle -->
+      <a-sphere position="-10 20 5" radius="2" color="#C22A2A"></a-sphere>
+      <a-sphere position="-10 15 5" radius="2" color="#C22A2A"></a-sphere>
+
+      <!-- Green Triangles inside the Green Rectangle -->
+
+      <!--Pointing Right-->
+      <a-triangle 
+        position="-10 10 20" 
+        rotation="180 0 -90"
+        vertex-a = "0 5 0"
+        vertex-b = "-2 0 0"
+        vertex-c="2 0 0"
+        color="#5FAE6E"
+        material="side: double"></a-triangle>
+      <!--Pointing Left-->
+        <a-triangle 
+        position="-10 7.5 20" 
+        rotation="180 0 90"
+        vertex-a = "0 5 0"
+        vertex-b = "-2 0 0"
+        vertex-c="2 0 0"
+        color="#5FAE6E"
+        material="side: double"></a-triangle>aw
+
+      <!--Green Semicircles-->
+      <!--Right Half-->
+      <a-cone 
+        position="-15 10 10"
+        rotation="-90 0 0"
+        height= "10"
+        radius-bottom = "2.5"
+        rotation="0 0 0"
+        theta-start="0"
+        theta-length ="180" 
+        color="#5FAE6E"
+        material="side: double">
+      </a-cone>
+      <!--Left Half-->
+      <a-circle 
+        position="-5 10 10"
+        rotation="0 0 -90"
+        height= "10"
+        radius = "2.5"
+        rotation="0 0 0"
+        theta-start="180"
+        theta-length ="180" 
+        color="#5FAE6E"
+        material="side: double">
+      </a-circle>
+
+      <!--END OF INCOMPLETE SECTION-->
 
       <!--TOP RIGHT: LEFT HALF-->
 
